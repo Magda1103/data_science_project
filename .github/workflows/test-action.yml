@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v3
-      - name: Install pytest
-        run: pip install pytest
-      - name: Run test
-        run:  pytest
+        uses: actions/checkout@v4
+      - name: Build Docker Image
+        run: docker build -t ds_project .
+      - name: Run Tests in Docker
+        run: docker run ds_project
