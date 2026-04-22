@@ -6,4 +6,4 @@ RUN pip install pytest
 
 COPY . .
 
-CMD ["tests"]
+CMD ["pytest"]
