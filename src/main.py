@@ -5,7 +5,7 @@ import joblib
 app = FastAPI()
 
 try:
-    model_pipline = joblib.load("models/final_pipline.pkl")
+    model_pipline = joblib.load("models/final_pipeline.pkl")
 except Exception as e:
     print(f"Model pipline not found, trying to load model from {e}")
 
